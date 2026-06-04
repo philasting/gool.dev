@@ -54,6 +54,42 @@ export const TOOLS: ToolMeta[] = [
     tags: ["regex", "regexp", "regular", "match", "test", "正则", "匹配"],
     priority: 50,
   },
+  {
+    slug: "json-to-ts",
+    name: "JSON → TypeScript",
+    description: "输入 JSON，自动生成 TypeScript interface 类型定义",
+    category: "dev",
+    icon: "Braces",
+    tags: ["json", "typescript", "interface", "type", "类型", "生成", "ts"],
+    priority: 115,
+  },
+  {
+    slug: "css-unit-converter",
+    name: "CSS 单位换算",
+    description: "px/rem/em/vw/vh/pt/% 互转，支持自定义基准值",
+    category: "dev",
+    icon: "Ruler",
+    tags: ["css", "unit", "px", "rem", "em", "vw", "换算", "单位"],
+    priority: 125,
+  },
+  {
+    slug: "color-contrast",
+    name: "颜色对比度",
+    description: "WCAG 对比度检测，AA/AAA 级别判定",
+    category: "dev",
+    icon: "Contrast",
+    tags: ["color", "contrast", "wcag", "accessibility", "对比度", "颜色", "无障碍"],
+    priority: 135,
+  },
+  {
+    slug: "yaml-json-converter",
+    name: "YAML ↔ JSON",
+    description: "YAML 与 JSON 格式互相转换",
+    category: "dev",
+    icon: "ArrowRightLeft",
+    tags: ["yaml", "json", "convert", "转换", "格式"],
+    priority: 145,
+  },
 
   // ─── P0: Text Tools ───
   {
@@ -83,6 +119,15 @@ export const TOOLS: ToolMeta[] = [
     tags: ["case", "upper", "lower", "camel", "snake", "kebab", "pascal", "大小写", "转换"],
     priority: 80,
   },
+  {
+    slug: "lorem-ipsum",
+    name: "Lorem Ipsum",
+    description: "随机占位文本生成，支持英文/中文，自定义段落数",
+    category: "text",
+    icon: "FileText",
+    tags: ["lorem", "ipsum", "placeholder", "text", "占位", "假文", "生成"],
+    priority: 85,
+  },
 
   // ─── P0: Image Tools ───
   {
@@ -93,6 +138,15 @@ export const TOOLS: ToolMeta[] = [
     icon: "FileImage",
     tags: ["image", "compress", "resize", "quality", "图片", "压缩", "调整"],
     priority: 90,
+  },
+  {
+    slug: "image-crop",
+    name: "图片裁剪",
+    description: "拖拽选区裁剪图片，支持自由/1:1/4:3/16:9 等比例",
+    category: "image",
+    icon: "Crop",
+    tags: ["image", "crop", "cut", "图片", "裁剪", "剪切"],
+    priority: 95,
   },
 
   // ─── P0: Crypto Tools ───
@@ -124,6 +178,15 @@ export const TOOLS: ToolMeta[] = [
     icon: "Globe",
     tags: ["ip", "address", "location", "geo", "IP地址", "查询", "地理位置"],
     priority: 120,
+  },
+  {
+    slug: "calculator",
+    name: "科学计算器",
+    description: "支持四则运算、三角函数、对数、幂运算等",
+    category: "life",
+    icon: "Calculator",
+    tags: ["calculator", "math", "计算器", "数学", "三角函数"],
+    priority: 130,
   },
 
   // ─── P1: Dev Tools ───

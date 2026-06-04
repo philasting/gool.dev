@@ -20,17 +20,24 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   "url-encode": dynamic(() => import("@/tools/dev/url-encode").then((m) => m.UrlEncodeTool), { ssr: false }),
   timestamp: dynamic(() => import("@/tools/dev/timestamp").then((m) => m.TimestampTool), { ssr: false }),
   "regex-tester": dynamic(() => import("@/tools/dev/regex-tester").then((m) => m.RegexTesterTool), { ssr: false }),
+  "json-to-ts": dynamic(() => import("@/tools/dev/json-to-ts").then((m) => m.JsonToTsTool), { ssr: false }),
+  "css-unit-converter": dynamic(() => import("@/tools/dev/css-unit-converter").then((m) => m.CssUnitConverterTool), { ssr: false }),
+  "color-contrast": dynamic(() => import("@/tools/dev/color-contrast").then((m) => m.ColorContrastTool), { ssr: false }),
+  "yaml-json-converter": dynamic(() => import("@/tools/dev/yaml-json-converter").then((m) => m.YamlJsonConverterTool), { ssr: false }),
   // P0: Text Tools
   "word-count": dynamic(() => import("@/tools/text/word-count").then((m) => m.WordCountTool), { ssr: false }),
   "text-dedup": dynamic(() => import("@/tools/text/text-dedup").then((m) => m.TextDedupTool), { ssr: false }),
   "case-converter": dynamic(() => import("@/tools/text/case-converter").then((m) => m.CaseConverterTool), { ssr: false }),
+  "lorem-ipsum": dynamic(() => import("@/tools/text/lorem-ipsum").then((m) => m.LoremIpsumTool), { ssr: false }),
   // P0: Image Tools
   "image-compress": dynamic(() => import("@/tools/image/image-compress").then((m) => m.ImageCompressTool), { ssr: false }),
+  "image-crop": dynamic(() => import("@/tools/image/image-crop").then((m) => m.ImageCropTool), { ssr: false }),
   // P0: Crypto Tools
   "hash-calculator": dynamic(() => import("@/tools/crypto/hash-calculator").then((m) => m.HashCalculatorTool), { ssr: false }),
   // P0: Life Tools
   "password-generator": dynamic(() => import("@/tools/life/password-generator").then((m) => m.PasswordGeneratorTool), { ssr: false }),
   "ip-query": dynamic(() => import("@/tools/life/ip-query").then((m) => m.IpQueryTool), { ssr: false }),
+  calculator: dynamic(() => import("@/tools/life/calculator").then((m) => m.CalculatorTool), { ssr: false }),
 
   // P1: Dev Tools
   "md5-sha": dynamic(() => import("@/tools/dev/md5-sha").then((m) => m.Md5ShaTool), { ssr: false }),
