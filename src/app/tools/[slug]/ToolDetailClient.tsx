@@ -99,6 +99,74 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   // P2 new: Life Tools
   "bmi-calculator": dynamic(() => import("@/tools/life/bmi-calculator").then((m) => m.BmiCalculatorTool), { ssr: false }),
   "exchange-rate": dynamic(() => import("@/tools/life/exchange-rate").then((m) => m.ExchangeRateTool), { ssr: false }),
+
+  // ─── 竞品补齐: Dev Tools ───
+  "xml-formatter": dynamic(() => import("@/tools/dev/xml-formatter").then((m) => m.XmlFormatterTool), { ssr: false }),
+  "html-formatter": dynamic(() => import("@/tools/dev/html-formatter").then((m) => m.HtmlFormatterTool), { ssr: false }),
+  "css-formatter": dynamic(() => import("@/tools/dev/css-formatter").then((m) => m.CssFormatterTool), { ssr: false }),
+  "js-formatter": dynamic(() => import("@/tools/dev/js-formatter").then((m) => m.JsFormatterTool), { ssr: false }),
+  "websocket-tester": dynamic(() => import("@/tools/dev/websocket-tester").then((m) => m.WebsocketTesterTool), { ssr: false }),
+  "code-screenshot": dynamic(() => import("@/tools/dev/code-screenshot").then((m) => m.CodeScreenshotTool), { ssr: false }),
+  "nanoid-generator": dynamic(() => import("@/tools/dev/nanoid-generator").then((m) => m.NanoidGeneratorTool), { ssr: false }),
+  "cidr-calculator": dynamic(() => import("@/tools/dev/cidr-calculator").then((m) => m.CidrCalculatorTool), { ssr: false }),
+  "chmod-calculator": dynamic(() => import("@/tools/dev/chmod-calculator").then((m) => m.ChmodCalculatorTool), { ssr: false }),
+  "json-csv-converter": dynamic(() => import("@/tools/dev/json-csv-converter").then((m) => m.JsonCsvConverterTool), { ssr: false }),
+  "html-preview": dynamic(() => import("@/tools/dev/html-preview").then((m) => m.HtmlPreviewTool), { ssr: false }),
+  "barcode-generator": dynamic(() => import("@/tools/dev/barcode-generator").then((m) => m.BarcodeGeneratorTool), { ssr: false }),
+  "css-gradient-generator": dynamic(() => import("@/tools/dev/css-gradient-generator").then((m) => m.CssGradientGeneratorTool), { ssr: false }),
+  "css-shadow-generator": dynamic(() => import("@/tools/dev/css-shadow-generator").then((m) => m.CssShadowGeneratorTool), { ssr: false }),
+  "css-grid-generator": dynamic(() => import("@/tools/dev/css-grid-generator").then((m) => m.CssGridGeneratorTool), { ssr: false }),
+  "css-flexbox-generator": dynamic(() => import("@/tools/dev/css-flexbox-generator").then((m) => m.CssFlexboxGeneratorTool), { ssr: false }),
+  "json-xml-converter": dynamic(() => import("@/tools/dev/json-xml-converter").then((m) => m.JsonXmlConverterTool), { ssr: false }),
+  "user-agent-parser": dynamic(() => import("@/tools/dev/user-agent-parser").then((m) => m.UserAgentParserTool), { ssr: false }),
+  "keycode-detector": dynamic(() => import("@/tools/dev/keycode-detector").then((m) => m.KeycodeDetectorTool), { ssr: false }),
+  "email-validator": dynamic(() => import("@/tools/dev/email-validator").then((m) => m.EmailValidatorTool), { ssr: false }),
+  "meta-tag-generator": dynamic(() => import("@/tools/dev/meta-tag-generator").then((m) => m.MetaTagGeneratorTool), { ssr: false }),
+  "url-parser": dynamic(() => import("@/tools/dev/url-parser").then((m) => m.UrlParserTool), { ssr: false }),
+  "dns-lookup": dynamic(() => import("@/tools/dev/dns-lookup").then((m) => m.DnsLookupTool), { ssr: false }),
+  "escape-unescape": dynamic(() => import("@/tools/dev/escape-unescape").then((m) => m.EscapeUnescapeTool), { ssr: false }),
+  "punycode-converter": dynamic(() => import("@/tools/dev/punycode-converter").then((m) => m.PunycodeConverterTool), { ssr: false }),
+  "json-schema-generator": dynamic(() => import("@/tools/dev/json-schema-generator").then((m) => m.JsonSchemaGeneratorTool), { ssr: false }),
+  "json-diff": dynamic(() => import("@/tools/dev/json-diff").then((m) => m.JsonDiffTool), { ssr: false }),
+  "color-palette": dynamic(() => import("@/tools/dev/color-palette").then((m) => m.ColorPaletteTool), { ssr: false }),
+  "data-size-converter": dynamic(() => import("@/tools/dev/data-size-converter").then((m) => m.DataSizeConverterTool), { ssr: false }),
+
+  // ─── 竞品补齐: Text Tools ───
+  "emoji-search": dynamic(() => import("@/tools/text/emoji-search").then((m) => m.EmojiSearchTool), { ssr: false }),
+  "text-remove-blank-lines": dynamic(() => import("@/tools/text/text-remove-blank-lines").then((m) => m.TextRemoveBlankLinesTool), { ssr: false }),
+  "text-sort": dynamic(() => import("@/tools/text/text-sort").then((m) => m.TextSortTool), { ssr: false }),
+  "word-frequency": dynamic(() => import("@/tools/text/word-frequency").then((m) => m.WordFrequencyTool), { ssr: false }),
+  "ascii-table": dynamic(() => import("@/tools/text/ascii-table").then((m) => m.AsciiTableTool), { ssr: false }),
+  "temp-note": dynamic(() => import("@/tools/text/temp-note").then((m) => m.TempNoteTool), { ssr: false }),
+  "fullwidth-halfwidth": dynamic(() => import("@/tools/text/fullwidth-halfwidth").then((m) => m.FullwidthHalfwidthTool), { ssr: false }),
+
+  // ─── 竞品补齐: Image Tools ───
+  "image-exif": dynamic(() => import("@/tools/image/image-exif").then((m) => m.ImageExifTool), { ssr: false }),
+  "image-flip-rotate": dynamic(() => import("@/tools/image/image-flip-rotate").then((m) => m.ImageFlipRotateTool), { ssr: false }),
+  "image-stitch": dynamic(() => import("@/tools/image/image-stitch").then((m) => m.ImageStitchTool), { ssr: false }),
+  "image-blur": dynamic(() => import("@/tools/image/image-blur").then((m) => m.ImageBlurTool), { ssr: false }),
+  "text-to-image": dynamic(() => import("@/tools/image/text-to-image").then((m) => m.TextToImageTool), { ssr: false }),
+  "gif-maker": dynamic(() => import("@/tools/image/gif-maker").then((m) => m.GifMakerTool), { ssr: false }),
+  "pixel-art": dynamic(() => import("@/tools/image/pixel-art").then((m) => m.PixelArtTool), { ssr: false }),
+  "image-invert": dynamic(() => import("@/tools/image/image-invert").then((m) => m.ImageInvertTool), { ssr: false }),
+
+  // ─── 竞品补齐: Doc Tools ───
+  "pdf-watermark": dynamic(() => import("@/tools/doc/pdf-watermark").then((m) => m.PdfWatermarkTool), { ssr: false }),
+
+  // ─── 竞品补齐: Crypto Tools ───
+  "hmac-generator": dynamic(() => import("@/tools/crypto/hmac-generator").then((m) => m.HmacGeneratorTool), { ssr: false }),
+  "caesar-cipher": dynamic(() => import("@/tools/crypto/caesar-cipher").then((m) => m.CaesarCipherTool), { ssr: false }),
+  "crc32-calculator": dynamic(() => import("@/tools/crypto/crc32-calculator").then((m) => m.Crc32CalculatorTool), { ssr: false }),
+  "base32-base58": dynamic(() => import("@/tools/crypto/base32-base58").then((m) => m.Base32Base58Tool), { ssr: false }),
+
+  // ─── 竞品补齐: Life Tools ───
+  "pomodoro": dynamic(() => import("@/tools/life/pomodoro").then((m) => m.PomodoroTool), { ssr: false }),
+  "date-calculator": dynamic(() => import("@/tools/life/date-calculator").then((m) => m.DateCalculatorTool), { ssr: false }),
+  "stopwatch": dynamic(() => import("@/tools/life/stopwatch").then((m) => m.StopwatchTool), { ssr: false }),
+  "timezone-converter": dynamic(() => import("@/tools/life/timezone-converter").then((m) => m.TimezoneConverterTool), { ssr: false }),
+  "screen-info": dynamic(() => import("@/tools/life/screen-info").then((m) => m.ScreenInfoTool), { ssr: false }),
+  "mortgage-calculator": dynamic(() => import("@/tools/life/mortgage-calculator").then((m) => m.MortgageCalculatorTool), { ssr: false }),
+  "tax-calculator": dynamic(() => import("@/tools/life/tax-calculator").then((m) => m.TaxCalculatorTool), { ssr: false }),
 };
 
 interface ToolDetailClientProps {
