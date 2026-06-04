@@ -333,6 +333,92 @@ export const TOOLS: ToolMeta[] = [
     tags: ["uuid", "guid", "generate", "id", "标识符", "批量"],
     priority: 340,
   },
+  // P1 new: Dev Tools
+  {
+    slug: "http-status-codes",
+    name: "HTTP 状态码",
+    description: "HTTP 状态码速查，支持搜索筛选，按分类展示",
+    category: "dev",
+    icon: "Server",
+    tags: ["http", "status", "code", "响应码", "状态码", "查询"],
+    priority: 350,
+  },
+  {
+    slug: "number-formatter",
+    name: "数字格式化",
+    description: "千分位/科学计数法/百分比/货币格式转换",
+    category: "dev",
+    icon: "Hash",
+    tags: ["number", "format", "currency", "scientific", "数字", "格式化", "货币"],
+    priority: 355,
+  },
+  {
+    slug: "mock-data-generator",
+    name: "随机数据生成",
+    description: "生成 Mock 数据，支持 JSON/CSV/SQL 输出",
+    category: "dev",
+    icon: "Database",
+    tags: ["mock", "data", "generate", "fake", "模拟", "数据", "生成"],
+    priority: 360,
+  },
+  {
+    slug: "jwt-generator",
+    name: "JWT 生成器",
+    description: "生成 HS256/HS384/HS512 签名的 JWT Token",
+    category: "dev",
+    icon: "Key",
+    tags: ["jwt", "token", "generate", "sign", "生成", "签名", "令牌"],
+    priority: 365,
+  },
+  // P1 new: Text Tools
+  {
+    slug: "text-to-speech",
+    name: "文本转语音",
+    description: "Web Speech API 文本朗读，可调语速音调",
+    category: "text",
+    icon: "Volume2",
+    tags: ["tts", "speech", "voice", "朗读", "语音", "文字转语音"],
+    priority: 370,
+  },
+  // P1 new: Image Tools
+  {
+    slug: "image-round-corners",
+    name: "图片圆角",
+    description: "给图片添加圆角，支持自定义半径和背景色",
+    category: "image",
+    icon: "Square",
+    tags: ["image", "round", "corner", "radius", "圆角", "图片", "边框"],
+    priority: 375,
+  },
+  {
+    slug: "svg-to-png",
+    name: "SVG 转 PNG",
+    description: "SVG 代码/文件转换为 PNG 图片下载",
+    category: "image",
+    icon: "ImageDown",
+    tags: ["svg", "png", "convert", "转换", "矢量", "图片"],
+    priority: 380,
+  },
+  // P1 new: Crypto Tools
+  {
+    slug: "otp-generator",
+    name: "OTP 验证码",
+    description: "TOTP 动态验证码生成，兼容 Google Authenticator",
+    category: "crypto",
+    icon: "Smartphone",
+    tags: ["otp", "totp", "authenticator", "2fa", "验证码", "动态", "双因素"],
+    priority: 385,
+  },
+  // P1 new: Life Tools
+  {
+    slug: "countdown-timer",
+    name: "倒计时",
+    description: "日期倒计时计时器，支持多个倒计时",
+    category: "life",
+    icon: "Hourglass",
+    tags: ["countdown", "timer", "date", "倒计时", "计时", "日期"],
+    priority: 390,
+  },
 
   // ─── P2: Dev Tools ───
   {
@@ -477,6 +563,35 @@ export const TOOLS: ToolMeta[] = [
     icon: "Banknote",
     tags: ["rmb", "chinese", "uppercase", "金额", "大写", "人民币"],
     priority: 540,
+  },
+  // P2 new: Text Tools
+  {
+    slug: "chinese-number",
+    name: "中文数字互转",
+    description: "阿拉伯数字 ↔ 中文数字互转，支持大小写财务",
+    category: "text",
+    icon: "Languages",
+    tags: ["chinese", "number", "convert", "中文", "数字", "大写", "财务"],
+    priority: 550,
+  },
+  // P2 new: Life Tools
+  {
+    slug: "bmi-calculator",
+    name: "BMI 计算器",
+    description: "身体质量指数计算，含分类和可视化",
+    category: "life",
+    icon: "Activity",
+    tags: ["bmi", "health", "weight", "身高", "体重", "体质指数"],
+    priority: 555,
+  },
+  {
+    slug: "exchange-rate",
+    name: "汇率换算",
+    description: "多币种汇率换算，支持 20+ 种货币",
+    category: "life",
+    icon: "Banknote",
+    tags: ["exchange", "rate", "currency", "汇率", "货币", "换算"],
+    priority: 560,
   },
 ];
 

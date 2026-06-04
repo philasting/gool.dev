@@ -59,6 +59,20 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   "image-to-pdf": dynamic(() => import("@/tools/doc/image-to-pdf").then((m) => m.ImageToPdfTool), { ssr: false }),
   // P1: Life Tools
   "uuid-generator": dynamic(() => import("@/tools/life/uuid-generator").then((m) => m.UuidGeneratorTool), { ssr: false }),
+  // P1 new: Dev Tools
+  "http-status-codes": dynamic(() => import("@/tools/dev/http-status-codes").then((m) => m.HttpStatusCodesTool), { ssr: false }),
+  "number-formatter": dynamic(() => import("@/tools/dev/number-formatter").then((m) => m.NumberFormatterTool), { ssr: false }),
+  "mock-data-generator": dynamic(() => import("@/tools/dev/mock-data-generator").then((m) => m.MockDataGeneratorTool), { ssr: false }),
+  "jwt-generator": dynamic(() => import("@/tools/dev/jwt-generator").then((m) => m.JwtGeneratorTool), { ssr: false }),
+  // P1 new: Text Tools
+  "text-to-speech": dynamic(() => import("@/tools/text/text-to-speech").then((m) => m.TextToSpeechTool), { ssr: false }),
+  // P1 new: Image Tools
+  "image-round-corners": dynamic(() => import("@/tools/image/image-round-corners").then((m) => m.ImageRoundCornersTool), { ssr: false }),
+  "svg-to-png": dynamic(() => import("@/tools/image/svg-to-png").then((m) => m.SvgToPngTool), { ssr: false }),
+  // P1 new: Crypto Tools
+  "otp-generator": dynamic(() => import("@/tools/crypto/otp-generator").then((m) => m.OtpGeneratorTool), { ssr: false }),
+  // P1 new: Life Tools
+  "countdown-timer": dynamic(() => import("@/tools/life/countdown-timer").then((m) => m.CountdownTimerTool), { ssr: false }),
 
   // P2: Dev Tools
   "sql-formatter": dynamic(() => import("@/tools/dev/sql-formatter").then((m) => m.SqlFormatterTool), { ssr: false }),
@@ -80,6 +94,11 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   // P2: Life Tools
   "unit-converter": dynamic(() => import("@/tools/life/unit-converter").then((m) => m.UnitConverterTool), { ssr: false }),
   "rmb-uppercase": dynamic(() => import("@/tools/life/rmb-uppercase").then((m) => m.RmbUppercaseTool), { ssr: false }),
+  // P2 new: Text Tools
+  "chinese-number": dynamic(() => import("@/tools/text/chinese-number").then((m) => m.ChineseNumberTool), { ssr: false }),
+  // P2 new: Life Tools
+  "bmi-calculator": dynamic(() => import("@/tools/life/bmi-calculator").then((m) => m.BmiCalculatorTool), { ssr: false }),
+  "exchange-rate": dynamic(() => import("@/tools/life/exchange-rate").then((m) => m.ExchangeRateTool), { ssr: false }),
 };
 
 interface ToolDetailClientProps {
