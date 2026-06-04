@@ -58,7 +58,6 @@ const EMOJI_DATA: EmojiCategory[] = [
       { emoji: "😬", name: "尴尬", keywords: ["grimace"] },
       { emoji: "😮‍💨", name: "叹气", keywords: ["exhale"] },
       { emoji: "🤥", name: "说谎", keywords: ["pinocchio"] },
-      { emoji: "😌", name: "如释重负", keywords: ["relieved"] },
       { emoji: "😔", name: "沮丧", keywords: ["sad", "pensive"] },
       { emoji: "😪", name: "困", keywords: ["sleepy"] },
       { emoji: "🤤", name: "流口水", keywords: ["drool"] },

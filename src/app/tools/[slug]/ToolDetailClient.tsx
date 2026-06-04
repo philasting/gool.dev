@@ -167,6 +167,47 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   "screen-info": dynamic(() => import("@/tools/life/screen-info").then((m) => m.ScreenInfoTool), { ssr: false }),
   "mortgage-calculator": dynamic(() => import("@/tools/life/mortgage-calculator").then((m) => m.MortgageCalculatorTool), { ssr: false }),
   "tax-calculator": dynamic(() => import("@/tools/life/tax-calculator").then((m) => m.TaxCalculatorTool), { ssr: false }),
+
+  // ─── 第4批竞品补齐: Dev Tools ───
+  "chinese-traditional-colors": dynamic(() => import("@/tools/dev/chinese-traditional-colors").then((m) => m.ChineseTraditionalColorsTool), { ssr: false }),
+  "color-wheel": dynamic(() => import("@/tools/dev/color-wheel").then((m) => m.ColorWheelTool), { ssr: false }),
+  "css-to-tailwind": dynamic(() => import("@/tools/dev/css-to-tailwind").then((m) => m.CssToTailwindTool), { ssr: false }),
+  "html-to-markdown": dynamic(() => import("@/tools/dev/html-to-markdown").then((m) => m.HtmlToMarkdownTool), { ssr: false }),
+  "curl-converter": dynamic(() => import("@/tools/dev/curl-converter").then((m) => m.CurlConverterTool), { ssr: false }),
+  "fancy-font-generator": dynamic(() => import("@/tools/text/fancy-font-generator").then((m) => m.FancyFontGeneratorTool), { ssr: false }),
+  "bionic-reading": dynamic(() => import("@/tools/text/bionic-reading").then((m) => m.BionicReadingTool), { ssr: false }),
+  "image-to-ascii": dynamic(() => import("@/tools/image/image-to-ascii").then((m) => m.ImageToAsciiTool), { ssr: false }),
+  "color-palette-extractor": dynamic(() => import("@/tools/image/color-palette-extractor").then((m) => m.ColorPaletteExtractorTool), { ssr: false }),
+  "video-to-gif": dynamic(() => import("@/tools/image/video-to-gif").then((m) => m.VideoToGifTool), { ssr: false }),
+  "zero-width-steganography": dynamic(() => import("@/tools/crypto/zero-width-steganography").then((m) => m.ZeroWidthSteganographyTool), { ssr: false }),
+  "kinship-calculator": dynamic(() => import("@/tools/life/kinship-calculator").then((m) => m.KinshipCalculatorTool), { ssr: false }),
+  "led-banner": dynamic(() => import("@/tools/life/led-banner").then((m) => m.LedBannerTool), { ssr: false }),
+  "life-progress": dynamic(() => import("@/tools/life/life-progress").then((m) => m.LifeProgressTool), { ssr: false }),
+  "pdf-to-image": dynamic(() => import("@/tools/doc/pdf-to-image").then((m) => m.PdfToImageTool), { ssr: false }),
+
+  // ─── 第4批竞品补齐: P1 Tools ───
+  "regex-reverse": dynamic(() => import("@/tools/dev/regex-reverse").then((m) => m.RegexReverseTool), { ssr: false }),
+  "email-signature-generator": dynamic(() => import("@/tools/dev/email-signature-generator").then((m) => m.EmailSignatureGeneratorTool), { ssr: false }),
+  "ascii-art": dynamic(() => import("@/tools/text/ascii-art").then((m) => m.AsciiArtTool), { ssr: false }),
+  "pangu-spacing": dynamic(() => import("@/tools/text/pangu-spacing").then((m) => m.PanguSpacingTool), { ssr: false }),
+  "teleprompter": dynamic(() => import("@/tools/text/teleprompter").then((m) => m.TeleprompterTool), { ssr: false }),
+  "meme-maker": dynamic(() => import("@/tools/image/meme-maker").then((m) => m.MemeMakerTool), { ssr: false }),
+  "image-steganography": dynamic(() => import("@/tools/crypto/image-steganography").then((m) => m.ImageSteganographyTool), { ssr: false }),
+  "decision-wheel": dynamic(() => import("@/tools/life/decision-wheel").then((m) => m.DecisionWheelTool), { ssr: false }),
+  "batch-rename": dynamic(() => import("@/tools/life/batch-rename").then((m) => m.BatchRenameTool), { ssr: false }),
+  "screen-recorder": dynamic(() => import("@/tools/life/screen-recorder").then((m) => m.ScreenRecorderTool), { ssr: false }),
+  "pdf-encrypt": dynamic(() => import("@/tools/doc/pdf-encrypt").then((m) => m.PdfEncryptTool), { ssr: false }),
+  "pdf-compress": dynamic(() => import("@/tools/doc/pdf-compress").then((m) => m.PdfCompressTool), { ssr: false }),
+  "pdf-page-numbers": dynamic(() => import("@/tools/doc/pdf-page-numbers").then((m) => m.PdfPageNumbersTool), { ssr: false }),
+
+  // ─── 第4批竞品补齐: P2 Tools ───
+  "kana-converter": dynamic(() => import("@/tools/text/kana-converter").then((m) => m.KanaConverterTool), { ssr: false }),
+  "mind-map": dynamic(() => import("@/tools/text/mind-map").then((m) => m.MindMapTool), { ssr: false }),
+  "id-photo-maker": dynamic(() => import("@/tools/image/id-photo-maker").then((m) => m.IdPhotoMakerTool), { ssr: false }),
+  "astrology-chart": dynamic(() => import("@/tools/life/astrology-chart").then((m) => m.AstrologyChartTool), { ssr: false }),
+  "world-holidays": dynamic(() => import("@/tools/life/world-holidays").then((m) => m.WorldHolidaysTool), { ssr: false }),
+  "screen-ruler": dynamic(() => import("@/tools/life/screen-ruler").then((m) => m.ScreenRulerTool), { ssr: false }),
+  "p2p-transfer": dynamic(() => import("@/tools/life/p2p-transfer").then((m) => m.P2pTransferTool), { ssr: false }),
 };
 
 interface ToolDetailClientProps {

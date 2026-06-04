@@ -18,7 +18,7 @@ import { CATEGORIES, getCategoryInfo } from "@/types/tool";
 import { useToolStore } from "@/stores/tool-store";
 import { useFavorites } from "@/hooks/use-favorites";
 import { useRecentTools } from "@/hooks/use-recent-tools";
-import { getToolBySlug } from "@/tools/registry";
+import { getToolBySlug, getToolsByCategory } from "@/tools/registry";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -89,6 +89,7 @@ export function Sidebar() {
             >
               <Icon className={cn("h-4 w-4", cat.color)} />
               {cat.labelZh}
+              <span className="ml-auto text-xs text-muted-foreground">{getToolsByCategory(cat.slug).filter(t => t.priority < 800).length}</span>
             </Link>
           );
         })}

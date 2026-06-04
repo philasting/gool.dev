@@ -22,6 +22,7 @@ export function ToolGrid({ category }: ToolGridProps) {
       <section className="animate-fade-in">
         <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
           {catInfo.labelZh}
+          <span className="text-sm font-normal text-muted-foreground">({tools.length})</span>
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
           {tools.map((tool) => (
@@ -58,6 +59,7 @@ export function ToolGrid({ category }: ToolGridProps) {
           <section key={cat.slug}>
             <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
               {cat.labelZh}
+              <span className="text-sm font-normal text-muted-foreground">({tools.length})</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
               {tools.map((tool) => (
