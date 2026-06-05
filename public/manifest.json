@@ -1,7 +1,7 @@
 {
-  "name": "GotAI - 即得",
-  "short_name": "GotAI",
-  "description": "GotAI 即得 — 免费在线工具，包含开发工具、文本处理、图片工具、编码加密等几十种实用工具",
+  "name": "Gool — 免费在线工具箱",
+  "short_name": "Gool",
+  "description": "Gool — 免费在线工具箱，152 种实用工具，含开发工具、文本处理、图片工具、编码加密等",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",

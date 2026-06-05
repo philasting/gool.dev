@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
     description: tool.description,
     keywords: tool.tags,
     openGraph: {
-      title: `${tool.name} - GotAI`,
+      title: `${tool.name} | Gool`,
       description: tool.description,
       type: "website",
     },

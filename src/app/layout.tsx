@@ -20,32 +20,32 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "GotAI - 即得",
-    template: "%s - GotAI",
+    default: "Gool — 免费在线工具箱",
+    template: "%s | Gool",
   },
   description:
-    "GotAI 即得 — 免费在线工具，包含开发工具、文本处理、图片工具、编码加密等42种实用工具，纯前端运行，无需登录",
+    "Gool — 免费在线工具箱，152 种实用工具，含开发工具、文本处理、图片工具、编码加密等，纯前端运行，无需登录，数据不离开浏览器",
   keywords: [
-    "在线工具", "GotAI", "即得", "JSON格式化", "Base64", "URL编码", "时间戳",
+    "在线工具", "Gool", "gool.dev", "JSON格式化", "Base64", "URL编码", "时间戳",
     "正则表达式", "哈希计算", "密码生成", "图片压缩", "PDF合并", "二维码",
     "Markdown", "文本加密", "RSA密钥", "单位换算", "人民币大写",
   ],
-  authors: [{ name: "GotAI" }],
-  creator: "GotAI",
-  metadataBase: new URL("https://gotai.vercel.app"),
+  authors: [{ name: "Gool" }],
+  creator: "Gool",
+  metadataBase: new URL("https://gool.dev"),
   openGraph: {
     type: "website",
     locale: "zh_CN",
-    siteName: "GotAI",
-    title: "GotAI - 即得",
+    siteName: "Gool",
+    title: "Gool — 免费在线工具箱",
     description:
-      "GotAI 即得 — 免费在线工具，42种实用工具，纯前端运行，数据不离开浏览器",
+      "Gool — 免费在线工具箱，152 种实用工具，纯前端运行，数据不离开浏览器",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GotAI - 即得",
+    title: "Gool — 免费在线工具箱",
     description:
-      "GotAI 即得 — 免费在线工具，42种实用工具，纯前端运行，数据不离开浏览器",
+      "Gool — 免费在线工具箱，152 种实用工具，纯前端运行，数据不离开浏览器",
   },
   manifest: "/manifest.json",
   icons: {
@@ -58,9 +58,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "GotAI",
-  description: "GotAI 即得 — 免费在线工具，包含开发工具、文本处理、图片工具、编码加密等42种实用工具",
-  url: "https://gotai.vercel.app",
+  name: "Gool",
+  description: "Gool — 免费在线工具箱，152 种实用工具，含开发工具、文本处理、图片工具、编码加密等",
+  url: "https://gool.dev",
   applicationCategory: "UtilitiesApplication",
   operatingSystem: "Any",
   offers: {

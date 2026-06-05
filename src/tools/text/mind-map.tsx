@@ -173,7 +173,7 @@ function flattenLayout(layoutNode: LayoutNode): LayoutNode[] {
   return result;
 }
 
-const DEFAULT_MARKDOWN = `# GotAI 工具箱
+const DEFAULT_MARKDOWN = `# Gool 工具箱
 - 文本工具
   - ASCII 艺术字
   - 中英文排版

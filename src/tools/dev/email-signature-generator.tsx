@@ -116,7 +116,7 @@ export function EmailSignatureGeneratorTool() {
   const fields: { key: keyof SignatureData; label: string; placeholder: string; type?: string }[] = [
     { key: "name", label: "姓名", placeholder: "张三" },
     { key: "title", label: "职位", placeholder: "高级前端工程师" },
-    { key: "company", label: "公司", placeholder: "GotAI 科技" },
+    { key: "company", label: "公司", placeholder: "Gool 科技" },
     { key: "phone", label: "电话", placeholder: "+86 138-0000-0000", type: "tel" },
     { key: "email", label: "邮箱", placeholder: "zhangsan@example.com", type: "email" },
     { key: "website", label: "网站", placeholder: "https://example.com", type: "url" },

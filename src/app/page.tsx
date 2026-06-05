@@ -33,7 +33,7 @@ function HomeContent() {
         <div className="flex items-center justify-center gap-2">
           <Sparkles className="h-6 w-6 text-primary" />
           <h1 className="text-3xl font-bold tracking-tight">
-            即得 AI 在线工具
+            Gool 在线工具箱
           </h1>
         </div>
         <p className="text-muted-foreground max-w-md mx-auto">

@@ -11,7 +11,7 @@ import { Download, Upload, Image, Lock, Unlock } from "lucide-react";
 import { toast } from "sonner";
 
 /** Magic header to identify stego images */
-const STEGO_MAGIC = "GSTG"; // GotAI Stego
+const STEGO_MAGIC = "GSTG"; // Gool Stego
 const HEADER_LEN = 4 + 4; // magic(4) + length(4)
 
 /**

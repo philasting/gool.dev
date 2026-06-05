@@ -69,8 +69,8 @@ const FALLBACK_RATES: Record<string, number> = {
   PLN: 3.98,
 };
 
-const CACHE_KEY = "gotai-exchange-rates";
-const CACHE_TIMESTAMP_KEY = "gotai-exchange-rates-ts";
+const CACHE_KEY = "gool-exchange-rates";
+const CACHE_TIMESTAMP_KEY = "gool-exchange-rates-ts";
 const CACHE_DURATION = 3600000; // 1 hour
 
 type FetchStatus = "idle" | "loading" | "success" | "error";

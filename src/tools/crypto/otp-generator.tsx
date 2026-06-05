@@ -20,7 +20,7 @@ interface OtpEntry {
   algorithm: Algorithm;
 }
 
-const STORAGE_KEY = "gotai-otp-entries";
+const STORAGE_KEY = "gool-otp-entries";
 
 function loadEntries(): OtpEntry[] {
   if (typeof window === "undefined") return [];

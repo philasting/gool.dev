@@ -13,7 +13,7 @@ interface NoteItem {
   content: string;
 }
 
-const STORAGE_KEY = "gotai-temp-notes";
+const STORAGE_KEY = "gool-temp-notes";
 
 function loadNotes(): NoteItem[] {
   if (typeof window === "undefined") return [];

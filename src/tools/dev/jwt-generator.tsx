@@ -71,8 +71,8 @@ const CLAIM_PRESETS: ClaimPreset[] = [
   { label: "exp (1小时后)", key: "exp", getValue: () => Math.floor(Date.now() / 1000) + 3600 },
   { label: "exp (24小时后)", key: "exp", getValue: () => Math.floor(Date.now() / 1000) + 86400 },
   { label: "sub (主题)", key: "sub", getValue: () => "user-123" },
-  { label: "iss (签发者)", key: "iss", getValue: () => "gotai-toolbox" },
-  { label: "aud (受众)", key: "aud", getValue: () => "gotai-users" },
+  { label: "iss (签发者)", key: "iss", getValue: () => "gool-toolbox" },
+  { label: "aud (受众)", key: "aud", getValue: () => "gool-users" },
 ];
 
 export function JwtGeneratorTool() {

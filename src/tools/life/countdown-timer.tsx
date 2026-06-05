@@ -13,7 +13,7 @@ interface CountdownItem {
   targetDate: string;
 }
 
-const STORAGE_KEY = "gotai-countdown-items";
+const STORAGE_KEY = "gool-countdown-items";
 
 function loadItems(): CountdownItem[] {
   if (typeof window === "undefined") return [];
