@@ -109,6 +109,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <script dangerouslySetInnerHTML={{ __html: swScript }} />
+        {/* Umami Analytics */}
+        <script
+          defer
+          src="https://data.gool.dev/script.js"
+          data-website-id="f08353e6-2674-4ff2-ad5c-e2cac4c872ec"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeProvider
