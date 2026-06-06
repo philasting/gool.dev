@@ -92,6 +92,24 @@ if ('serviceWorker' in navigator) {
 }
 `;
 
+/** Console brand banner printed on page load */
+const buildTime = process.env.NEXT_PUBLIC_BUILD_TIME ?? new Date().toISOString();
+const consoleBanner = `
+(function() {
+  var t = "${buildTime}";
+  var d = new Date(t);
+  var pad = function(n) { return n < 10 ? '0' + n : n; };
+  var local = d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate())
+    + ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+  console.log(
+    '%c  GOOL.DEV  %c\\n%c Built: ' + local,
+    'background:#18181b;color:#a78bfa;font-size:20px;font-weight:900;padding:6px 16px;border-radius:6px 6px 0 0;letter-spacing:4px;',
+    '',
+    'color:#71717a;font-size:11px;'
+  );
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -109,6 +127,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <script dangerouslySetInnerHTML={{ __html: swScript }} />
+        {/* Console brand banner */}
+        <script dangerouslySetInnerHTML={{ __html: consoleBanner }} />
         {/* Umami Analytics */}
         <script
           defer
