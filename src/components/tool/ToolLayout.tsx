@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Star, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,14 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
   const { isFavorite, toggleFavorite } = useFavorites();
   const { addRecentTool } = useRecentTools();
   const favorite = isFavorite(tool.slug);
+  const favoriteLock = useRef(0);
+
+  const handleToggleFavorite = () => {
+    const now = Date.now();
+    if (now - favoriteLock.current < 50) return;
+    favoriteLock.current = now;
+    toggleFavorite(tool.slug);
+  };
 
   // Track as recently used (useEffect to avoid infinite re-renders)
   useEffect(() => {
@@ -58,7 +66,7 @@ export function ToolLayout({ tool, children }: ToolLayoutProps) {
         <Button
           variant="ghost"
           size="icon"
-          onClick={() => toggleFavorite(tool.slug)}
+          onClick={handleToggleFavorite}
           className="shrink-0"
           title={favorite ? "取消收藏 (Alt+F)" : "收藏 (Alt+F)"}
         >

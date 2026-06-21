@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const SEARCH_HISTORY_KEY = "gool-search-history";
-const MAX_HISTORY = 15;
+const MAX_HISTORY = 20;
 
 function loadHistory(): string[] {
   try {

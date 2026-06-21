@@ -57,7 +57,7 @@ export function Sidebar() {
   const sidebarContent = (
     <div className="flex flex-col h-full">
       {/* All tools */}
-      <div className="px-3 py-2">
+      <div className="px-3 py-2 space-y-0.5">
         <Link
           href="/"
           onClick={() => setSidebarOpen(false)}
@@ -70,6 +70,24 @@ export function Sidebar() {
         >
           <LayoutGrid className="h-4 w-4" />
           全部工具
+        </Link>
+        <Link
+          href="/favorites"
+          onClick={() => setSidebarOpen(false)}
+          className={cn(
+            "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+            pathname === "/favorites"
+              ? "bg-accent text-accent-foreground"
+              : "text-muted-foreground"
+          )}
+        >
+          <Star className="h-4 w-4 text-yellow-500" />
+          我的收藏
+          {favorites.length > 0 && (
+            <span className="ml-auto text-xs bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 px-1.5 py-0.5 rounded-full">
+              {favorites.length}
+            </span>
+          )}
         </Link>
       </div>
 
@@ -106,35 +124,6 @@ export function Sidebar() {
       </div>
 
       <Separator />
-
-      {/* Favorites */}
-      {favorites.length > 0 && (
-        <>
-          <div className="px-3 py-2">
-            <p className="px-3 mb-1 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-              收藏
-            </p>
-            <ScrollArea className="max-h-40">
-              {favorites.map((slug) => {
-                const tool = getToolBySlug(slug);
-                if (!tool) return null;
-                return (
-                  <Link
-                    key={slug}
-                    href={`/tools/${slug}`}
-                    onClick={() => setSidebarOpen(false)}
-                    className="flex items-center gap-3 rounded-lg px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-                  >
-                    <Star className="h-3.5 w-3.5 text-yellow-500" />
-                    <span className="truncate">{tool.name}</span>
-                  </Link>
-                );
-              })}
-            </ScrollArea>
-          </div>
-          <Separator />
-        </>
-      )}
 
       {/* Recent tools */}
       {recentTools.length > 0 && (

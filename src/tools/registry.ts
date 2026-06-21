@@ -1633,7 +1633,7 @@ export const TOOLS: ToolMeta[] = [
   },
   {
     slug: "zh-trans",
-    name: "中繁英翻译",
+    name: "简繁英翻译",
     description: "简体中文 / 繁体中文 / 英文三语同步对照翻译",
     category: "text",
     icon: "Languages",
