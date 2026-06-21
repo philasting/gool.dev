@@ -1374,7 +1374,7 @@ export const TOOLS: ToolMeta[] = [
     category: "text",
     icon: "Languages",
     tags: ["kana", "hiragana", "katakana", "romaji", "日语", "假名", "罗马音"],
-    priority: 800,
+    priority: 763,
   },
   {
     slug: "mind-map",
@@ -1383,7 +1383,7 @@ export const TOOLS: ToolMeta[] = [
     category: "text",
     icon: "GitBranch",
     tags: ["mind", "map", "tree", "思维导图", "脑图"],
-    priority: 801,
+    priority: 764,
   },
   {
     slug: "id-photo-maker",
@@ -1392,7 +1392,7 @@ export const TOOLS: ToolMeta[] = [
     category: "image",
     icon: "User",
     tags: ["id", "photo", "证件照", "换底", "裁切"],
-    priority: 802,
+    priority: 765,
   },
   {
     slug: "astrology-chart",
@@ -1401,7 +1401,7 @@ export const TOOLS: ToolMeta[] = [
     category: "life",
     icon: "Star",
     tags: ["astrology", "zodiac", "constellation", "星座", "星盘", "占星"],
-    priority: 803,
+    priority: 766,
   },
   {
     slug: "world-holidays",
@@ -1410,7 +1410,7 @@ export const TOOLS: ToolMeta[] = [
     category: "life",
     icon: "Calendar",
     tags: ["holiday", "world", "calendar", "假期", "节日", "全球"],
-    priority: 804,
+    priority: 767,
   },
   {
     slug: "screen-ruler",
@@ -1419,7 +1419,7 @@ export const TOOLS: ToolMeta[] = [
     category: "life",
     icon: "Ruler",
     tags: ["screen", "ruler", "measure", "屏幕尺", "标尺", "测量"],
-    priority: 805,
+    priority: 768,
   },
   {
     slug: "p2p-transfer",
@@ -1428,7 +1428,7 @@ export const TOOLS: ToolMeta[] = [
     category: "life",
     icon: "Send",
     tags: ["p2p", "webrtc", "transfer", "file", "传输", "文件"],
-    priority: 806,
+    priority: 769,
   },
 
   // ─── Info Tools (Phase 1) ───
@@ -1629,7 +1629,7 @@ export const TOOLS: ToolMeta[] = [
     category: "dev",
     icon: "Clock",
     tags: ["timestamp", "unix", "date", "时间戳", "转换", "格式化", "日期"],
-    priority: 807,
+    priority: 770,
   },
   {
     slug: "zh-trans",
@@ -1638,7 +1638,7 @@ export const TOOLS: ToolMeta[] = [
     category: "text",
     icon: "Languages",
     tags: ["translate", "翻译", "简体", "繁体", "英文", "中文", "三语"],
-    priority: 808,
+    priority: 771,
   },
 ];
 
