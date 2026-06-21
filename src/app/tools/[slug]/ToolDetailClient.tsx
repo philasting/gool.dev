@@ -208,6 +208,34 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   "world-holidays": dynamic(() => import("@/tools/life/world-holidays").then((m) => m.WorldHolidaysTool), { ssr: false }),
   "screen-ruler": dynamic(() => import("@/tools/life/screen-ruler").then((m) => m.ScreenRulerTool), { ssr: false }),
   "p2p-transfer": dynamic(() => import("@/tools/life/p2p-transfer").then((m) => m.P2pTransferTool), { ssr: false }),
+  // Info tools (Phase 1)
+  "lunar-calendar": dynamic(() => import("@/tools/info/lunar-calendar").then((m) => m.LunarCalendarTool), { ssr: false }),
+  "holiday-countdown": dynamic(() => import("@/tools/info/holiday-countdown").then((m) => m.HolidayCountdownTool), { ssr: false }),
+  "chinese-zodiac": dynamic(() => import("@/tools/info/chinese-zodiac").then((m) => m.ChineseZodiacTool), { ssr: false }),
+  "horoscope": dynamic(() => import("@/tools/info/horoscope").then((m) => m.HoroscopeTool), { ssr: false }),
+  // Finance tools (Phase 1)
+  "compound-interest-calculator": dynamic(() => import("@/tools/finance/compound-interest-calculator").then((m) => m.CompoundInterestCalculatorTool), { ssr: false }),
+  "income-tax-calculator": dynamic(() => import("@/tools/finance/income-tax-calculator").then((m) => m.IncomeTaxCalculatorTool), { ssr: false }),
+  "loan-calculator": dynamic(() => import("@/tools/finance/loan-calculator").then((m) => m.LoanCalculatorTool), { ssr: false }),
+  "fund-return-calculator": dynamic(() => import("@/tools/finance/fund-return-calculator").then((m) => m.FundReturnCalculatorTool), { ssr: false }),
+  "deposit-rate-comparison": dynamic(() => import("@/tools/finance/deposit-rate-comparison").then((m) => m.DepositRateComparisonTool), { ssr: false }),
+  // AI tools (Phase 1)
+  "prompt-optimizer": dynamic(() => import("@/tools/ai/prompt-optimizer").then((m) => m.PromptOptimizerTool), { ssr: false }),
+  "token-calculator": dynamic(() => import("@/tools/ai/token-calculator").then((m) => m.TokenCalculatorTool), { ssr: false }),
+  "ai-chat-exporter": dynamic(() => import("@/tools/ai/ai-chat-exporter").then((m) => m.AiChatExporterTool), { ssr: false }),
+  // Fun tools (Phase 2)
+  "tarot-divination": dynamic(() => import("@/tools/fun/tarot-divination").then((m) => m.TarotDivinationTool), { ssr: false }),
+  "dream-dictionary": dynamic(() => import("@/tools/fun/dream-dictionary").then((m) => m.DreamDictionaryTool), { ssr: false }),
+  "zodiac-pairing": dynamic(() => import("@/tools/fun/zodiac-pairing").then((m) => m.ZodiacPairingTool), { ssr: false }),
+  "mbti-test": dynamic(() => import("@/tools/fun/mbti-test").then((m) => m.MBTITestTool), { ssr: false }),
+  // Study tools (Phase 2)
+  "flash-cards": dynamic(() => import("@/tools/study/flash-cards").then((m) => m.FlashCardTool), { ssr: false }),
+  "ebbinghaus": dynamic(() => import("@/tools/study/ebbinghaus").then((m) => m.EbbinghausTool), { ssr: false }),
+  "speed-reading": dynamic(() => import("@/tools/study/speed-reading").then((m) => m.SpeedReadingTool), { ssr: false }),
+  "pomodoro-pro": dynamic(() => import("@/tools/study/pomodoro-pro").then((m) => m.PomodoroProTool), { ssr: false }),
+  // Batch 5
+  "timestamp-formatter": dynamic(() => import("@/tools/dev/timestamp-formatter").then((m) => m.TimestampFormatterTool), { ssr: false }),
+  "zh-trans": dynamic(() => import("@/tools/text/zh-trans").then((m) => m.ZhTransTool), { ssr: false }),
 };
 
 interface ToolDetailClientProps {

@@ -12,6 +12,11 @@ import {
   Star,
   History,
   LayoutGrid,
+  Info,
+  DollarSign,
+  Sparkles,
+  Gamepad2,
+  GraduationCap,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CATEGORIES, getCategoryInfo } from "@/types/tool";
@@ -35,6 +40,11 @@ const CATEGORY_ICONS: Record<string, React.ComponentType<{ className?: string }>
   doc: FileText,
   crypto: Shield,
   life: Heart,
+  info: Info,
+  finance: DollarSign,
+  ai: Sparkles,
+  fun: Gamepad2,
+  study: GraduationCap,
 };
 
 export function Sidebar() {
