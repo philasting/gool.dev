@@ -1,5 +1,5 @@
 /** Category types for the toolbox */
-export type Category = "dev" | "text" | "image" | "doc" | "crypto" | "life" | "info" | "finance" | "ai" | "fun" | "study";
+export type Category = "dev" | "text" | "image" | "doc" | "crypto" | "life" | "info" | "finance" | "ai" | "fun" | "study" | "trending";
 
 /** Category display information */
 export interface CategoryInfo {
@@ -30,6 +30,7 @@ export interface ToolMeta {
 
 /** Categories configuration */
 export const CATEGORIES: CategoryInfo[] = [
+  { slug: "trending", label: "Trending", labelZh: "热榜", icon: "TrendingUp", color: "text-rose-500" },
   { slug: "dev", label: "Developer", labelZh: "开发工具", icon: "Code2", color: "text-blue-500" },
   { slug: "text", label: "Text", labelZh: "文本工具", icon: "Type", color: "text-green-500" },
   { slug: "image", label: "Image", labelZh: "图片工具", icon: "Image", color: "text-purple-500" },

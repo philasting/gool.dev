@@ -236,6 +236,14 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   // Batch 5
   "timestamp-formatter": dynamic(() => import("@/tools/dev/timestamp-formatter").then((m) => m.TimestampFormatterTool), { ssr: false }),
   "zh-trans": dynamic(() => import("@/tools/text/zh-trans").then((m) => m.ZhTransTool), { ssr: false }),
+  // Trending (Edge-backed)
+  "trending-overview": dynamic(() => import("@/tools/trending/trending-overview"), { ssr: false }),
+  "trending-weibo": dynamic(() => import("@/tools/trending/trending-weibo"), { ssr: false }),
+  "trending-zhihu": dynamic(() => import("@/tools/trending/trending-zhihu"), { ssr: false }),
+  "trending-bilibili": dynamic(() => import("@/tools/trending/trending-bilibili"), { ssr: false }),
+  "trending-github": dynamic(() => import("@/tools/trending/trending-github"), { ssr: false }),
+  "trending-douyin": dynamic(() => import("@/tools/trending/trending-douyin"), { ssr: false }),
+  "trending-juejin": dynamic(() => import("@/tools/trending/trending-juejin"), { ssr: false }),
 };
 
 interface ToolDetailClientProps {

@@ -17,6 +17,7 @@ import {
   Sparkles,
   Gamepad2,
   GraduationCap,
+  TrendingUp,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CATEGORIES, getCategoryInfo } from "@/types/tool";
@@ -45,6 +46,7 @@ const CATEGORY_ICONS: Record<string, React.ComponentType<{ className?: string }>
   ai: Sparkles,
   fun: Gamepad2,
   study: GraduationCap,
+  trending: TrendingUp,
 };
 
 export function Sidebar() {

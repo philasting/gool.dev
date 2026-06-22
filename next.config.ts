@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  // Removed `output: "export"` to enable Edge Functions & API Routes on Vercel.
+  // Static pages continue to be pre-rendered (SSG) via generateStaticParams.
+  // Dynamic API routes run as Edge Functions.
   images: {
     unoptimized: true,
   },
