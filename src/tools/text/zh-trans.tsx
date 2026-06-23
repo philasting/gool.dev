@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Copy, Check, Trash2, Loader2, Languages } from "lucide-react";
 import { toast } from "sonner";
-import { s2t, t2s } from "./zh-trans-dict";
+import { s2t, t2s } from "./_opencc";
 
 // ─── Types ────────────────────────────────────────────────────────────────
 
@@ -46,11 +46,51 @@ const LANG_CONFIG: Record<Lang, LangConfig> = {
 /**
  * Translate text from one language to another.
  *
- * - zh-Hans ↔ zh-Hant: local character conversion (instant, no network)
- * - zh ↔ en: MyMemory translation API (free, CORS-enabled, no API key)
+ * - zh-Hans ↔ zh-Hant: local OpenCC conversion (instant, no network)
+ * - zh ↔ en: Google Translate API (primary) with MyMemory fallback
  * - zh-Hant ↔ en: routed through zh-Hans for the API call, then
- *   locally converted to/from traditional
+ *   locally converted to/from traditional via OpenCC
  */
+
+/** Translate text using Google Translate's free endpoint (CORS-enabled). */
+async function translateWithGoogle(
+  text: string,
+  sl: string,
+  tl: string,
+  signal?: AbortSignal
+): Promise<string> {
+  const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sl}&tl=${tl}&dt=t&q=${encodeURIComponent(text)}`;
+  const res = await fetch(url, { signal });
+  if (!res.ok) throw new Error(`Google Translate HTTP ${res.status}`);
+  const data = await res.json();
+  if (!Array.isArray(data) || !Array.isArray(data[0])) {
+    throw new Error("Google Translate: unexpected response");
+  }
+  return data[0].map((seg: unknown) => (seg as string[])[0]).join("");
+}
+
+/** Translate text using MyMemory API (fallback). */
+async function translateWithMyMemory(
+  text: string,
+  sourceCode: string,
+  targetCode: string,
+  signal?: AbortSignal
+): Promise<string> {
+  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceCode}|${targetCode}`;
+  const res = await fetch(url, { signal });
+  if (!res.ok) {
+    throw new Error(`翻译请求失败 (HTTP ${res.status})`);
+  }
+  const data = await res.json();
+  if (data.responseStatus !== 200 && data.responseData?.translatedText == null) {
+    throw new Error(data.responseDetails || "翻译服务返回错误");
+  }
+  let result: string = data.responseData.translatedText || "";
+  // Handle HTML entity decoding (MyMemory sometimes returns encoded chars)
+  result = decodeEntities(result);
+  return result;
+}
+
 async function translateText(
   text: string,
   from: Lang,
@@ -60,7 +100,7 @@ async function translateText(
   const trimmed = text.trim();
   if (!trimmed) return "";
 
-  // Local simplified ↔ traditional conversion
+  // Local simplified ↔ traditional conversion (OpenCC)
   if (from === "zh-Hans" && to === "zh-Hant") {
     return s2t(text);
   }
@@ -90,23 +130,16 @@ async function translateText(
     targetCode = "en";
   }
 
-  const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(apiText)}&langpair=${sourceCode}|${targetCode}`;
-  const res = await fetch(url, { signal });
-
-  if (!res.ok) {
-    throw new Error(`翻译请求失败 (HTTP ${res.status})`);
+  // Try Google Translate first, fall back to MyMemory on failure
+  let result: string;
+  try {
+    result = await translateWithGoogle(apiText, sourceCode, targetCode, signal);
+  } catch (err) {
+    // Propagate abort errors — don't attempt fallback
+    if (err instanceof DOMException && err.name === "AbortError") throw err;
+    if (signal?.aborted) throw err;
+    result = await translateWithMyMemory(apiText, sourceCode, targetCode, signal);
   }
-
-  const data = await res.json();
-
-  if (data.responseStatus !== 200 && data.responseData?.translatedText == null) {
-    throw new Error(data.responseDetails || "翻译服务返回错误");
-  }
-
-  let result: string = data.responseData.translatedText || "";
-
-  // Handle HTML entity decoding (MyMemory sometimes returns encoded chars)
-  result = decodeEntities(result);
 
   // Post-process: convert to traditional if target is zh-Hant
   if (to === "zh-Hant") {
@@ -265,7 +298,7 @@ export function ZhTransTool() {
 
   /**
    * Perform translation from the given source language to the other two.
-   * Uses local conversion for zh↔zh and MyMemory API for zh↔en.
+   * Uses local conversion for zh↔zh and Google Translate for zh↔en.
    */
   const doTranslate = useCallback(
     async (source: Lang, text: string) => {
@@ -443,13 +476,13 @@ export function ZhTransTool() {
       <div className="flex items-center justify-between flex-wrap gap-2 text-xs text-muted-foreground">
         <div className="flex items-center gap-2">
           <Badge variant="outline" className="text-[10px]">
-            简繁转换：本地字典
+            简繁转换：OpenCC
           </Badge>
           <Badge variant="outline" className="text-[10px]">
-            中英翻译：MyMemory API
+            中英翻译：Google Translate
           </Badge>
         </div>
-        <span>由 MyMemory 提供翻译服务</span>
+        <span>由 Google Translate 提供翻译服务</span>
       </div>
     </div>
   );
