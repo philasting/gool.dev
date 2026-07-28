@@ -238,6 +238,11 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   "zh-trans": dynamic(() => import("@/tools/text/zh-trans").then((m) => m.ZhTransTool), { ssr: false }),
   // Playground tools
   "js-playground": dynamic(() => import("@/tools/playground/js-playground").then((m) => m.JsPlaygroundTool), { ssr: false }),
+  "python-playground": dynamic(() => import("@/tools/playground/python-playground").then((m) => m.PythonPlaygroundTool), { ssr: false }),
+  "code-playground": dynamic(() => import("@/tools/playground/code-playground").then((m) => m.CodePlaygroundTool), { ssr: false }),
+  "sqlite-playground": dynamic(() => import("@/tools/playground/sqlite-playground").then((m) => m.SqlitePlaygroundTool), { ssr: false }),
+  "ruby-playground": dynamic(() => import("@/tools/playground/ruby-playground").then((m) => m.RubyPlaygroundTool), { ssr: false }),
+  "lua-playground": dynamic(() => import("@/tools/playground/lua-playground").then((m) => m.LuaPlaygroundTool), { ssr: false }),
   // Trending (Edge-backed)
   "trending-overview": dynamic(() => import("@/tools/trending/trending-overview"), { ssr: false }),
   "trending-weibo": dynamic(() => import("@/tools/trending/trending-weibo"), { ssr: false }),

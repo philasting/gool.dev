@@ -54,6 +54,9 @@ import {
   Grid3X3,
   Radio,
   Banknote,
+  FileCode2,
+  Gem,
+  Moon,
 } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -105,6 +108,9 @@ const ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
   Grid3X3,
   Radio,
   Banknote,
+  FileCode2,
+  Gem,
+  Moon,
 };
 
 interface ToolCardProps {
