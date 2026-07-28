@@ -1643,6 +1643,17 @@ export const TOOLS: ToolMeta[] = [
 
   // ─── Trending ───
   {
+    slug: "js-playground",
+    name: "JS 库在线运行",
+    description: "在线执行 dayjs、decimal.js、lodash 等流行 JS 库，无需起项目",
+    category: "playground",
+    icon: "Terminal",
+    tags: ["js", "playground", "sandbox", "dayjs", "decimal.js", "lodash", "在线运行", "代码执行", "沙箱"],
+    priority: 10,
+  },
+
+  // ─── Trending Tools ───
+  {
     slug: "trending-overview",
     name: "热榜总览",
     description: "一屏聚合微博、知乎、B站、GitHub、抖音、掘金实时热榜",

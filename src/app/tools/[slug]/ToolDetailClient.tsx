@@ -236,6 +236,8 @@ const toolComponents: Record<string, React.ComponentType<ToolComponentProps>> = 
   // Batch 5
   "timestamp-formatter": dynamic(() => import("@/tools/dev/timestamp-formatter").then((m) => m.TimestampFormatterTool), { ssr: false }),
   "zh-trans": dynamic(() => import("@/tools/text/zh-trans").then((m) => m.ZhTransTool), { ssr: false }),
+  // Playground tools
+  "js-playground": dynamic(() => import("@/tools/playground/js-playground").then((m) => m.JsPlaygroundTool), { ssr: false }),
   // Trending (Edge-backed)
   "trending-overview": dynamic(() => import("@/tools/trending/trending-overview"), { ssr: false }),
   "trending-weibo": dynamic(() => import("@/tools/trending/trending-weibo"), { ssr: false }),

@@ -17,6 +17,7 @@ import {
   Sparkles,
   Gamepad2,
   GraduationCap,
+  FlaskConical,
   TrendingUp,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -46,6 +47,7 @@ const CATEGORY_ICONS: Record<string, React.ComponentType<{ className?: string }>
   ai: Sparkles,
   fun: Gamepad2,
   study: GraduationCap,
+  playground: FlaskConical,
   trending: TrendingUp,
 };
 
